@@ -1,22 +1,110 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-.App-logo {
-  height: 40vmin;
+.App{
+  padding-bottom: 50px;
+  background-color: #F2F3F7;
+  display: inline-block;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-image: linear-gradient(#7982FE, #BFE8FF);
+  min-height: 200px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px 20px 20px 20px;
+}
+
+.companyName{
+  text-align: right;
+  float: right;
+}
+
+.nav{
+  background-color: transparent;
+  float: left;
+  width: 60%;
+  border: none;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .App-link {
   color: #09d3ac;
+}
+
+h1 {
+  width: 60%;
+  float: right;
+  font-size: 18px!important;
+  text-transform: capitalize;
+}
+
+.item_card {
+  width: 30%;
+  margin: 3%;
+  background-color: white;
+  border-radius: 10%;
+  padding: 1em;
+}
+
+.item_picture {
+  width: 30%;
+}
+
+.itemHeader {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.itemBody {
+  color: #A3A2AC;
+  margin-bottom: 10px;
+}
+
+div#dashboard_options {
+  padding: 20px 0px;
+    width: 15%;
+    float: left;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10%;
+    height: 400px;
+    color: #A3A2AC;
+}
+
+#dashboard_options li {
+  list-style-type: none;
+  padding-bottom: 1em;
+}
+
+.cardItems {
+  width: 60%;
+  display: inline-flex;
+  float: left;
+}
+
+.item_card.default {
+  text-align: center;
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+
+.customizablePanel {
+  margin-top: -4em;
+}
+
+.itemHeader h1 {
+  font-weight: 900;
+}
+
+img.bubuLogo {
+  width: 15%;
+}
+
+img.logoutIcon {
+  width: 50%;
+  padding-top: 20px;
 }
