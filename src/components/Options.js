@@ -46,7 +46,7 @@ class Items extends React.Component {
         return (
             <div className="cardItems">
                 <Card isDefault="true" />
-                <Card photo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png" item="This is the item name" store="This is the store name" happiness="This is my happiness level" />
+                <Card photo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png" item="Laptop" store="Apple" price="1799.99" happiness="7.4" />
             </div>
         );
     }

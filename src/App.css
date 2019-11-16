@@ -108,3 +108,24 @@ img.logoutIcon {
   width: 50%;
   padding-top: 20px;
 }
+
+img.addItem {
+  width: 50%;
+}
+
+.itemSection img {
+  width: 30%!important;
+  float: left;
+}
+
+.itemSection {
+  display: inline-block;
+}
+
+.itemSection p {
+  padding-top: .75em;
+}
+
+.itemHeader h1 {
+  padding-top: .55em;
+}

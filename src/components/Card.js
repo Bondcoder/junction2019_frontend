@@ -1,4 +1,7 @@
 import React from 'react';
+import addItem from '../img/addItem.png'
+import Location from '../img/Location.png'
+import Money from '../img/money.png'
 
 function Card(props) {
     const isDefault = props.isDefault;
@@ -6,7 +9,7 @@ function Card(props) {
         return (
             <div className="item_card default">
                 <div className="itemBody">
-                    <p>default</p>
+                    <img src={addItem} className="addItem"/>
                 </div>
             </div >
         );
@@ -19,9 +22,9 @@ function Card(props) {
                     <h1>{props.item}</h1>
                 </div>
                 <div className="itemBody">
-                    <p>{props.store}</p>
-                    <p>{props.price}</p>
-                    <p>{props.happiness}</p>
+                    <div class="itemSection"><img src={Location}/><p>{props.store}</p></div>
+                    <div class="itemSection"><img src={Money}/><p>{props.price}</p></div>
+                    <div class="itemSection"><img src={Location}/><p>{props.happiness}</p></div>
                 </div>
             </div >
         );
