@@ -86,7 +86,7 @@ div#dashboard_options {
   float: left;
 }
 
-.item_card.default {
+.item_card .default {
   text-align: center;
   padding-top: 85px;
   padding-bottom: 85px;
@@ -128,4 +128,34 @@ img.addItem {
 
 .itemHeader h1 {
   padding-top: .55em;
+}
+
+input {
+  border: none;
+  padding: .5em;
+  border-bottom: 1px solid grey;
+  margin-left: 0px;
+}
+
+.item_card .form {
+  padding-top: 2em;
+}
+
+.happyQuestion{
+  text-align: center;
+  margin-top: 1em;
+}
+
+button.confirmButton {
+  background-color: #B9D2DA;
+  border: none;
+  color: white;
+  border-radius: 10%;
+  text-align: center;
+  margin: 0 auto!important;
+  width: 100%;
+}
+
+textarea:focus, input:focus{
+  outline: none;
 }

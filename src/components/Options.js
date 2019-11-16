@@ -10,7 +10,6 @@ class Options extends React.Component {
     }
 
     handleClick(compName, e) {
-        console.log(compName);
         this.setState({ render: compName });
 
     }
