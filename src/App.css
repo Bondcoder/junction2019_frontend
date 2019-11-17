@@ -228,3 +228,14 @@ button.addData {
   padding-bottom: 172px;
   margin: 0 auto;
 }
+
+.comingSoonSection {
+  height: 400px;
+  margin-top: 20px;
+  width: 81%;
+  display: inline-flex;
+  float: left;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1em;
+}

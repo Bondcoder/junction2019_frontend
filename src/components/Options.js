@@ -79,7 +79,9 @@ class Analytic extends React.Component {
 class Settings extends React.Component {
     render() {
         return (
-            <p>Settings</p>
+            <div className="comingSoonSection">
+                <p>Coming soon...</p>
+            </div>
         );
     }
 }
@@ -87,7 +89,9 @@ class Settings extends React.Component {
 class Help extends React.Component {
     render() {
         return (
-            <p>Help</p>
+            <div className="comingSoonSection">
+                <p>Coming soon...</p>
+            </div>
         );
     }
 }
