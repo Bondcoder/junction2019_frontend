@@ -240,7 +240,7 @@ button.addData {
   padding: 1em;
 }
 
-button:focus{
+.emojiList button:focus{
   background-color: #BFE8FF;
   color: #fff
 }
