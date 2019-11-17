@@ -1,16 +1,18 @@
 import React from 'react';
 import Card from './Card'
+import Purchases from './Purchases'
 
 class Options extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             opened: true,
+            active: false,
         };
     }
 
     handleClick(compName, e) {
-        this.setState({ render: compName });
+        this.setState({ render: compName, active: true });
 
     }
 
@@ -19,6 +21,7 @@ class Options extends React.Component {
             case 'analytics': return <Analytics />
             case 'settings': return <Settings />
             case 'help': return <Help />
+            case 'purchases': return <Purchase />
             default: return <Items />
         }
     }
@@ -28,10 +31,11 @@ class Options extends React.Component {
             <div className="customizablePanel">
                 <div id="dashboard_options">
                     <ul>
-                        <li onClick={this.handleClick.bind(this, 'items')}>Items</li>
-                        <li onClick={this.handleClick.bind(this, 'analytics')}>Analytics</li>
-                        <li onClick={this.handleClick.bind(this, 'settings')}>Settings</li>
-                        <li onClick={this.handleClick.bind(this, 'help')}>Help</li>
+                        <li onClick={this.handleClick.bind(this, 'items')} className={this.state.condition ? "button toggled" : "button"}>Items</li>
+                        <li onClick={this.handleClick.bind(this, 'purchases')} className={this.state.condition ? "button toggled" : "button"}>Purchases</li>
+                        <li onClick={this.handleClick.bind(this, 'analytics')} className={this.state.condition ? "button toggled" : "button"}>Analytics</li>
+                        <li onClick={this.handleClick.bind(this, 'settings')} className={this.state.condition ? "button toggled" : "button"}>Settings</li>
+                        <li onClick={this.handleClick.bind(this, 'help')} className={this.state.condition ? "button toggled" : "button"}>Help</li>
                     </ul>
                 </div>
                 {this._renderSubcomponent()}
@@ -45,8 +49,19 @@ class Items extends React.Component {
         return (
             <div className="cardItems">
                 <Card isDefault="true" />
+                <Card />
                 <Card photo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png" item="Laptop" store="Apple" price="1799.99" happiness="7.4" />
             </div>
+        );
+    }
+}
+
+class Purchase extends React.Component {
+    render() {
+        return (
+            <tbody className="purchasesTab">
+                <Purchases date="12/11/2019" company="Stockman" price="45.40" />
+            </tbody>
         );
     }
 }

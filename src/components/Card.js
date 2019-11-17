@@ -5,6 +5,7 @@ import Money from '../img/money.png'
 import HappyFace from '../img/happiness.png'
 import SadFace from '../img/sadness.png'
 import NoThatHappyFace from '../img/nosohappy.png'
+import Emoji from './Emojis'
 
 class Card extends React.Component {
 
@@ -27,7 +28,6 @@ class Card extends React.Component {
     }
 
     handleClick(test, e){
-        console.log(test);
         this.setState({ render: test })
     }
 
@@ -101,14 +101,71 @@ class CreateItem extends React.Component {
 }
 
 class AddItem extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            formControls: {
+                item: {
+                    value: ''
+                },
+                store: {
+                    value: ''
+                },
+                price: {
+                    value: ''
+                },
+                happinessLevel: {
+                    value: ''
+                }
+
+            }
+        };
+    }
+
+    clickHandler = level => {
+        this.setState({
+            formControls: {
+                ...this.state.formControls,
+                happinessLevel: level
+            }
+        })
+
+        console.log(level);
+    }
+
+    changeHandler = event => {
+        const name = event.target.name;
+        const value = event.target.value;
+        
+        this.setState({
+            formControls: {
+                ...this.state.formControls,
+                [name]: {
+                    ...this.state.formControls[name],
+                    value
+                }
+            }
+        })
+    }
+
+
     render() {
         return (
                 <div className="form itemBody">
-                    <input type="text" placeholder="Item name" />
-                    <input type="text" placeholder="Store/Brand" />
-                    <input type="number" placeholder="Price"/>
-                    <p className="happyQuestion">How do you feel about it?</p>
-                    <button className="confirmButton">Confirm</button>
+                    <form>
+                        <input type="text" placeholder="Item name" name="item" value={this.state.formControls.item.value} onChange={this.changeHandler}/>
+                        <input type="text" placeholder="Store/Brand" name="store" value={this.state.formControls.store.value} onChange={this.changeHandler}/>
+                        <input type="number" placeholder="Price" name="price" value={this.state.formControls.price.value} onChange={this.changeHandler}/>
+                        <p className="happyQuestion">How do you feel about it?</p>
+                        <div className="emojiList">
+                            <button type="button" className="test" onClick={() => {this.clickHandler(10)}}>Wow! <Emoji symbol="🤤" label="Wow!"/></button>
+                            <button type="button" onClick={() => {this.clickHandler(7)}}>Mmm <Emoji symbol="🙂" label="Mmm"/></button>
+                            <button type="button" onClick={() => {this.clickHandler(5)}}>Hmm <Emoji symbol="🤔" label="Hmm"/></button>
+                            <button type="button" onClick={() => {this.clickHandler(3)}}>Meh <Emoji symbol="😒" label="Meh"/></button>
+                            <button type="button" onClick={() => {this.clickHandler(1)}}>Puf <Emoji symbol="😤" label="Puf"/></button>
+                        </div>
+                        <button className="confirmButton">Confirm</button>
+                    </form>
                 </div>
         );
     }
