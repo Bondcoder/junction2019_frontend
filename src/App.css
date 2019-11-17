@@ -239,3 +239,8 @@ button.addData {
   border-radius: 10px;
   padding: 1em;
 }
+
+button:focus{
+  background-color: #BFE8FF;
+  color: #fff
+}
