@@ -4,7 +4,7 @@
   padding-bottom: 50px;
   background-color: #F2F3F7;
   display: inline-block;
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   width: 100%;
 }
@@ -43,7 +43,7 @@ h1 {
 }
 
 .item_card {
-  width: 30%;
+  width: 27%;
   margin: 3%;
   background-color: white;
   border-radius: 10%;
@@ -83,7 +83,8 @@ div#dashboard_options {
 
 .cardItems {
   width: 81%;
-  display: inline-flex;
+  flex-wrap: wrap;
+  display: flex;
   float: left;
 }
 
@@ -208,4 +209,22 @@ button.addData {
   padding-left: 1em;
   padding-right: 1em;
   background-color: #51D9FF;
+}
+
+.analytics_card {
+  margin-top: 20px;
+  width: 39%;
+  margin-right: 1em;
+  display: inline-flex;
+  float: left;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.comingSoon {
+  width: 50%;
+  padding-top: 172px;
+  padding-bottom: 172px;
+  margin: 0 auto;
 }
