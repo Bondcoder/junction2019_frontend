@@ -104,6 +104,7 @@ class AddItem extends React.Component {
     constructor(props){
         super(props);
         this.state = {
+            bgColor: 'white',
             formControls: {
                 item: {
                     value: ''
@@ -118,7 +119,7 @@ class AddItem extends React.Component {
                     value: ''
                 }
 
-            }
+            },
         };
     }
 
